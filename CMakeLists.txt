@@ -7,7 +7,7 @@ project(
     VERSION 0.1.0
     DESCRIPTION "maze"
     HOMEPAGE_URL "https://github.com/bensuperpc"
-    LANGUAGES CXX
+    LANGUAGES CXX C
 )
 
 include(cmake/project-is-top-level.cmake)

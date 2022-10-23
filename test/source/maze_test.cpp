@@ -1,8 +1,10 @@
 #include "lib.hpp"
 
-auto main() -> int
+#include "gtest/gtest.h"
+
+TEST(MAZE, basic_calc_base_1)
 {
   auto const lib = library {};
 
-  return lib.name == "maze" ? 0 : 1;
+  EXPECT_EQ(lib.name == "maze", 1);
 }
