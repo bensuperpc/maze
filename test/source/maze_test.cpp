@@ -1,6 +1,5 @@
-#include "lib.hpp"
-
 #include "gtest/gtest.h"
+#include "lib.hpp"
 
 TEST(MAZE, basic_calc_base_1)
 {

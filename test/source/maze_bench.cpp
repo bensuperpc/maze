@@ -12,7 +12,6 @@ static void maze_bench(benchmark::State& state)
   benchmark::DoNotOptimize(lib.name);
   for (auto _ : state) {
     if (lib.name == "maze") {
-      
     }
     benchmark::ClobberMemory();
   }
@@ -20,7 +19,10 @@ static void maze_bench(benchmark::State& state)
   state.SetBytesProcessed(state.iterations() * sizeof(uint64_t));
 }
 // Register the function as a benchmark
-BENCHMARK(maze_bench)->Name("maze_bench")->RangeMultiplier(100)->Range(1, 1000000000000000);
+BENCHMARK(maze_bench)
+    ->Name("maze_bench")
+    ->RangeMultiplier(100)
+    ->Range(1, 1000000000000000);
 
 // Run the benchmark
 // BENCHMARK_MAIN();

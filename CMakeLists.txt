@@ -15,6 +15,12 @@ include(cmake/variables.cmake)
 
 # ---- Declare library ----
 
+include(cmake/lib/vector.cmake)
+
+include(cmake/lib/raylib.cmake)
+include(cmake/lib/raygui.cmake)
+include(cmake/lib/raylib-cpp.cmake)
+
 add_library(
     maze_lib OBJECT
     source/lib.cpp
@@ -38,6 +44,10 @@ set_property(TARGET maze_exe PROPERTY OUTPUT_NAME maze)
 target_compile_features(maze_exe PRIVATE cxx_std_20)
 
 target_link_libraries(maze_exe PRIVATE maze_lib)
+
+#target_link_libraries(maze_exe PRIVATE vector::vector)
+
+target_link_libraries(maze_exe PRIVATE raylib raylib_cpp)
 
 # ---- Install rules ----
 
